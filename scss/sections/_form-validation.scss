@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Form Validation
+// ===========================================================================
+
+.form-validation {
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		border: 1px solid $color-border;
+		width: 33%;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	&__header {
+		background-color: $color-500;
+		text-align: center;
+		padding: $gap-5 $gap-3;
+	}
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__main-box {
+		padding: $gap-3;
+	}
+
+	&__btn-box {
+		align-self: flex-end;
+		display: flex;
+		justify-content: flex-end;
+		gap: 1.5rem;
+	}
+
+	&__btn {
+		padding: 0.5em 2em;
+	}
+}

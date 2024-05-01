@@ -1,0 +1,114 @@
+@use "./variables" as *;
+
+// ===========================================================================
+// Buttons
+// ===========================================================================
+
+.btn {
+	position: relative;
+	padding: $btn-padding;
+	background: transparent;
+	border-radius: $btn-border-radius;
+	overflow: hidden;
+
+	&__transparent,
+	&__solid,
+	&__solid-gradient,
+	&__border,
+	&__border-gradient {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $btn-default-color;
+		border-radius: $btn-border-radius;
+		pointer-events: none;
+		transition: filter $btn-transition-time;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: $btn-border-radius;
+			border: $btn-border-width solid transparent;
+			background: $btn-default-color border-box;
+			mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+			mask-composite: exclude;
+		}
+
+		&:hover {
+			filter: brightness($btn-hover-brightness);
+		}
+	}
+
+	&__click-animation {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		// background-color: rgba(255, 0, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		pointer-events: none;
+		animation: btnClickAnimation 0.3s forwards;
+		opacity: 1;
+		transition: opacity 0.3s;
+
+		@keyframes btnClickAnimation {
+			from {
+				width: 0;
+				height: 0;
+			}
+			to {
+				width: var(--animation-size);
+				height: var(--animation-size);
+			}
+		}
+
+		&--hide {
+			opacity: 0;
+		}
+	}
+
+	&__transparent {
+		background: transparent;
+
+		&::before {
+			display: none;
+		}
+
+		&:hover {
+			filter: none;
+		}
+	}
+
+	&__border {
+		background: transparent;
+	}
+
+	&__solid-gradient {
+		background: transparent;
+
+		&::before {
+			background: $btn-gradient-color border-box;
+			mask-composite: add;
+		}
+	}
+
+	&__border-gradient {
+		background: transparent;
+
+		&::before {
+			background: $btn-gradient-color border-box;
+		}
+	}
+
+	&__text {
+		position: relative;
+		color: $color-text;
+		pointer-events: none;
+	}
+}

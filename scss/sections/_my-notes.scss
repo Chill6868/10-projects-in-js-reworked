@@ -1,0 +1,118 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// myNotes
+// ===========================================================================
+
+.mynotes {
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		padding: $gap-3;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-3;
+		// justify-content: center;
+		// align-items: center;
+	}
+
+	&__top-bar {
+		// border: 1px solid red;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		font-size: 3rem;
+		font-weight: bold;
+		cursor: default;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+
+	&__top-bar-btn-box {
+		display: flex;
+		gap: $gap-2;
+	}
+
+	&__top-bar-btn {
+		padding: $gap-1 $gap-3;
+
+		.btn__border {
+			&::before {
+				background: $color-800 border-box;
+			}
+		}
+	}
+
+	&__notes-container {
+		// border: 1px solid red;
+		display: grid;
+		grid-template-columns: repeat(5, calc(20% - ($gap-3 * 0.8)));
+		gap: $gap-3;
+	}
+
+	&__note {
+		border: 1px solid $color-800;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	&__note-header {
+		padding: $gap-2;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $color-800;
+	}
+
+	&__note-btn-delete {
+		// padding: $gap-1;
+		padding: 0.5rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+
+	&__note-container {
+		height: 100%;
+		padding: $gap-2;
+		// background-color: lime;
+	}
+
+	&__note-text-content {
+		text-wrap: balance;
+	}
+}
+
+.modal-add-note {
+	// display: block;
+	display: flex;
+	flex-direction: column;
+	gap: $gap-3;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__btn {
+		.btn__border {
+			&::before {
+				background: $color-800 border-box;
+			}
+		}
+	}
+}

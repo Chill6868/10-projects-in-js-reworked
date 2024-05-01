@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+// ===========================================================================
+// Anchors Styles
+// ===========================================================================
+
+// Default link
+
+.a {
+	transition: filter 0.3s;
+
+	&:hover {
+		filter: brightness($hover-brightness);
+	}
+
+	&__custom-1 {
+		color: $color-500;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

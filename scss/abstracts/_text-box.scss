@@ -1,0 +1,17 @@
+// ===========================================================================
+// Text Box
+// ===========================================================================
+
+.text-box {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	// border: 1px solid red;
+	margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+	.text-box {
+		width: 75%;
+	}
+}

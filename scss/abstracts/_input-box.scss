@@ -1,0 +1,84 @@
+@use "./variables" as *;
+@use "./animations" as *;
+
+// ===========================================================================
+// Input Box
+// ===========================================================================
+
+.input {
+	&__container {
+		// border: 1px solid blue;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-color: $color-900;
+		// border: 1px solid red;
+
+		input,
+		select {
+			width: 100%;
+			padding: 2rem 1.5rem;
+			background-color: inherit;
+			border: 1px solid $color-border;
+			border-radius: $border-radius;
+			outline: none;
+			transition: border 0.3s;
+
+			&:focus {
+				border: 1px solid $color-500;
+			}
+
+			&:focus ~ label,
+			&:focus ~ select {
+				color: $color-500;
+			}
+		}
+
+		label {
+			font-size: 1.4rem;
+			padding: 0 0.5rem;
+			background-color: inherit;
+			position: absolute;
+			top: 0;
+			left: 1rem;
+			transform: translateY(-50%);
+			transition: color 0.3s;
+		}
+
+		&--error {
+			input {
+				border: 1px solid rgb(200, 100, 100);
+			}
+
+			label {
+				color: rgb(200, 100, 100);
+			}
+		}
+	}
+
+	&__req {
+		padding: 0.5rem $border-radius;
+		font-size: 1.6rem;
+		transition: color 0.3s;
+
+		&--error {
+			color: rgb(200, 100, 100);
+		}
+
+		&--success {
+			color: rgb(103, 200, 100);
+		}
+	}
+
+	// &__req-icon {}
+}

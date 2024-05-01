@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 JS Projects | Dashboard | Reworked</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap" rel="stylesheet">
+    <!-- Tabler Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- Modal Shadow -->
+    <div class="modal__shadow"></div>
+
+    <main class="main">
+        <nav class="nav">
+            <div class="nav__box nav__box--title-box">
+                <h1 class="nav__title">10 Projektów w JS</h1>
+                <button class="btn nav__btn btn-nav-minify">
+                    <div class="btn__transparent"></div>
+                    <span class="btn__text"><i class="ti ti-square-arrow-left"></i> Zwiń</span>
+                </button>
+            </div>
+
+            <div class="nav__box">
+                <h2 class="nav__subtitle">Informacje</h2>
+                <div class="nav__btn-box">
+                    <button class="about btn nav__btn nav__btn--active">
+                        <div class="btn__transparent"></div>
+                        <span class="btn__text"><i class="ti ti-info-circle"></i> O Projekcie</span>
+                    </button>
+                    <a href="https://wiktorignasiak.com/" target="_blank" class="btn nav__btn btn-animation">
+                        <div class="btn__transparent"></div>
+                        <span class="btn__text"><i class="ti ti-user"></i> O mnie</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav__box">
+                <h2 class="nav__subtitle">Projekty</h2>
+                <div class="nav__scroll-box">
+                    <div class="nav__btn-box nav__projects-box">
+                        <button class="search-engine btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-search"></i> Drink Search</span>
+                        </button>
+
+                        <button class="billsplitter btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-receipt-2"></i> Billsplitter</span>
+                        </button>
+
+                        <button class="form-validation btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-list-check"></i> Walidator Formularza</span>
+                        </button>
+
+                        <button class="magic8ball btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-sport-billard"></i> Magic 8Ball</span>
+                        </button>
+
+                        <button class="stopwatch btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-alarm"></i> Stoper</span>
+                        </button>
+
+                        <button class="mynotes btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-note"></i> MyNotes</span>
+                        </button>
+
+                        <button class="exchange-rate-app btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-coins"></i> Exchange Rate App</span>
+                        </button>
+
+                        <button class="wallet btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-wallet"></i> Wallet</span>
+                        </button>
+
+                        <button class="countdown btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-calendar-clock"></i> Czaso-odliczator</span>
+                        </button>
+
+                        <button class="todo-list btn nav__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-checklist"></i> ToDo Lista</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="nav-mini nav-mini--hidden">
+            <div class="nav-mini__box">
+                <button class="btn nav-mini__btn btn-nav-enlarge">
+                    <div class="btn__transparent"></div>
+                    <span class="btn__text"><i class="ti ti-square-arrow-right"></i></span>
+                </button>
+            </div>
+
+            <div class="nav-mini__box">
+                <div class="nav-mini__btn-box">
+                    <button class="about btn nav-mini__btn nav-mini__btn--active">
+                        <div class="btn__transparent"></div>
+                        <span class="btn__text"><i class="ti ti-info-circle"></i></span>
+                    </button>
+                    <a href="https://wiktorignasiak.com/" target="_blank" class="btn nav-mini__btn btn-animation">
+                        <div class="btn__transparent"></div>
+                        <span class="btn__text"><i class="ti ti-user"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-mini__box">
+                <div class="nav-mini__scroll-box">
+                    <div class="nav-mini__btn-box nav-mini__projects-box">
+                        <button class="search-engine btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-search"></i></span>
+                        </button>
+
+                        <button class="billsplitter btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-receipt-2"></i></span>
+                        </button>
+
+                        <button class="form-validation btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-list-check"></i></span>
+                        </button>
+
+                        <button class="magic8ball btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-sport-billard"></i></span>
+                        </button>
+
+                        <button class="stopwatch btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-alarm"></i></span>
+                        </button>
+
+                        <button class="mynotes btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-note"></i></span>
+                        </button>
+
+                        <button class="exchange-rate-app btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-coins"></i></span>
+                        </button>
+
+                        <button class="wallet btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-wallet"></i></span>
+                        </button>
+
+                        <button class="countdown btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-calendar-clock"></i></span>
+                        </button>
+
+                        <button class="todo-list btn nav-mini__btn">
+                            <div class="btn__transparent"></div>
+                            <span class="btn__text"><i class="ti ti-checklist"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main__container">
+
+            <!-- Validation Form Modal -->
+            <div class="modal__box modal-form-sended-successful">
+                <h3 class="modal-form-sended-successful__title">Formularz został pomyślnie wysłany.</h3>
+                <button class="modal__btn-close modal-form-sended-successful__btn btn">
+                    <div class="btn__solid"></div>
+                    <div class="btn__text">Zamknij</div>
+                </button>
+            </div>
+
+            <div class="modal__box modal-stopwatch-help">
+                <h3 class="modal-stopwatch-help__title">Pomoc</h3>
+                <div class="modal-stopwatch-help__item-box">
+                    <p><i class="modal-stopwatch-help__icon ti ti-player-play"></i>-Start</p>
+                    <p><i class="modal-stopwatch-help__icon ti ti-player-pause"></i>-Pauza</p>
+                    <p><i class="modal-stopwatch-help__icon ti ti-player-stop"></i>-Stop</p>
+                    <p><i class="modal-stopwatch-help__icon ti ti-player-stop"></i>-Wyczyść</p>
+                    <p><span class="modal-stopwatch-help__icon">Archiwum</span> - Przełącz widoczność archiwum</p>
+                </div>
+                <button class="modal__btn-close modal-stopwatch-help__btn btn">
+                    <div class="btn__transparent"></div>
+                    <div class="btn__text">Zamknij</div>
+                </button>
+            </div>
+
+            <div class="modal__box modal-add-note">
+                <h3 class="modal-add-note__title">Dodaj Notatkę</h3>
+                <div class="input__container">
+                    <div class="input__box">
+                        <input type="text" id="note-title">
+                        <label for="note-title">Tytuł notatki:</label>
+                        <p class="input__req"><span class="input__req-icon"><i
+                                    class="ti ti-exclamation-circle"></i></span> Wpisz tytuł notatki.</p>
+                    </div>
+                    <div class="input__box">
+                        <input type="text" id="note-text">
+                        <label for="note-text">Treść notatki:</label>
+                        <p class="input__req"><span class="input__req-icon"><i
+                                    class="ti ti-exclamation-circle"></i></span> Wpisz treść notatki.</p>
+                    </div>
+                </div>
+                <div class="modal-add-note__btn-box">
+                    <button class="btn modal-add-note__btn note-save">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-device-floppy"></i> Zapisz</div>
+                    </button>
+                    <button class="btn modal__btn-close modal-add-note__btn note-save-cancel">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-square-x"></i> Anuluj</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="main__section-container">
+            </div>
+        </div>
+    </main>
+
+    <div class="width-alert">
+        <div class="width-alert__container">
+            <div class="wrapper">
+                <div class="width-alert__text-box">
+                    <h2 class="text__xl"><span class="text__color-warning"><i
+                                class="ti ti-exclamation-circle"></i></span>
+                        Szerokość okna</h2>
+                    <p class="text__md">Aby strona mogła wyświetlać się poprawnie, szerokość okna nie może wynosić mniej
+                        niż
+                        <span class="text__color-main">1920px</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <script src="./js/navigation.js"></script>
+
+    <!-- Button Click Animation -->
+    <script src="./js/btnClickAnimation.js"></script>
+
+    <!-- Check Screen Width -->
+    <script src="./js/screenWidthCheck.js"></script>
+
+    <!-- Forms -->
+    <script src="./js/form.js"></script>
+
+    <!-- Modals -->
+    <script src="./js/modals.js"></script>
+
+    <!-- Project 1 (DrinkSearch) -->
+    <script src="./js/projects/drinkSearch.js"></script>
+
+    <!-- Project 2 (BillSplitter) -->
+    <script src="./js/projects/billSplitter.js"></script>
+
+    <!-- Project 3 (Form Validation) -->
+    <script src="./js/projects/formValidation.js"></script>
+
+    <!-- Project 4 (Magic 8Ball) -->
+    <script src="./js/projects/magic8Ball.js"></script>
+
+    <!-- Project 5 (Stopwatch) -->
+    <script src="./js/projects/stopwatch.js"></script>
+
+    <!-- Project 6 (myNotes) -->
+    <script src="./js/projects/myNotes.js"></script>
+
+    <!-- Project 7 (Exchange Rate App) -->
+    <script src="./js/projects/exchangeRateApp.js"></script>
+
+    <!-- Project 8 (Wallet) -->
+    <script src="./js/projects/wallet.js"></script>
+
+    <!-- Project 9 (Timer) -->
+    <script src="./js/projects/timer.js"></script>
+
+    <!-- Project 10 (ToDo List) -->
+    <script src="./js/projects/toDoList.js"></script>
+
+</body>
+
+</html>

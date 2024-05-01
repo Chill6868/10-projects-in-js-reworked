@@ -1,0 +1,93 @@
+@use "./variables" as *;
+
+.text {
+	&__xl {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: 0.05em;
+	}
+
+	&__lg {
+		font-size: 2.5rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+
+	&__sm {
+		font-size: 1.6rem;
+		font-weight: 300;
+		letter-spacing: 0.15em;
+	}
+
+	&__color-main {
+		color: $color-500;
+	}
+
+	&__color-warning {
+		color: rgb(225, 0, 0);
+	}
+
+	&__gradient-1 {
+		background: linear-gradient(to right, #447799 30%, #b11e1e 100%);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+@media (min-width: 576px) {
+	.text {
+		&__xl {
+			font-size: 3.5rem;
+		}
+
+		&__lg {
+			font-size: 2.75rem;
+		}
+
+		// &__sm {}
+	}
+}
+
+@media (min-width: 768px) {
+	.text {
+		&__xl {
+			font-size: 4rem;
+		}
+
+		&__lg {
+			font-size: 3.25rem;
+		}
+
+		// &__sm {}
+	}
+}
+
+@media (min-width: 992px) {
+	.text {
+		&__xl {
+			font-size: 4.5rem;
+		}
+		&__lg {
+			font-size: 3.75rem;
+		}
+
+		// &__sm {}
+	}
+}
+
+@media (min-width: 1200px) {
+	.text {
+		&__xl {
+			font-size: 5rem;
+		}
+
+		// &__lg {}
+
+		// &__sm {}
+	}
+}
+
+@media (min-width: 1400px) {
+	// .text {}
+}

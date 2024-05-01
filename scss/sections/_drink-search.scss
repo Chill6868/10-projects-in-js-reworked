@@ -1,0 +1,82 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Drink Search
+// ===========================================================================
+
+.drink-search {
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		width: 50%;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	&__header {
+		z-index: 0;
+		position: relative;
+		padding: $gap-5 $gap-3;
+		background-image: url("../img/drinksearch/header.jpg");
+		background-position: center;
+		background-size: cover;
+
+		&--shadow {
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+	}
+
+	&__title {
+		color: $color-500;
+	}
+
+	&__subtitle {
+		color: $color-500;
+	}
+
+	&__main-box {
+		padding: $gap-3;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	// &__item-box {}
+
+	&__item {
+		margin: $gap-1 $gap-3;
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__item-not-found {
+		margin: $gap-1 0;
+		display: none;
+
+		&--visible {
+			display: block;
+		}
+	}
+}

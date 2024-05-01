@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Example Section
+// ===========================================================================
+
+.example {
+	margin: 5rem 0;
+	// height: 100vh;
+	// ================
+	// Remove that, just for overview
+	// ================
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__container {
+		padding: $gap-3;
+		background-color: $color-900;
+		border: 1px solid gray;
+		border-radius: $border-radius;
+	}
+
+	&__text {
+		text-align: center;
+		color: $color-500;
+	}
+}
+
+@media (min-width: 576px) {
+	// .example {}
+}
+
+@media (min-width: 768px) {
+	// .example {}
+}
+
+@media (min-width: 992px) {
+	// .example {}
+}
+
+@media (min-width: 1200px) {
+	// .example {}
+}
+
+@media (min-width: 1400px) {
+	// .example {}
+}

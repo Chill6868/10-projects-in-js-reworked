@@ -1,0 +1,167 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Stopwatch
+// ===========================================================================
+
+:root {
+	--stopwatch-color: orangered;
+}
+
+$stopwatch-color: var(--stopwatch-color);
+
+.stopwatch {
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		position: relative;
+		width: 50%;
+		padding: $gap-3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-3;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	&__modal-btn-box {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+	&__modal-btn {
+		padding: 1rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $stopwatch-color;
+		}
+	}
+
+	&__theme-selection-box {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -10rem;
+		// border: 1px solid red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-2;
+		transition: right 0.3s;
+
+		&--visible {
+			right: 1.5rem;
+		}
+	}
+
+	&__theme-selection-btn {
+		padding: 2rem;
+		border-radius: 50%;
+
+		&--red {
+			background-color: orangered;
+		}
+		&--blue {
+			background-color: royalblue;
+		}
+		&--green {
+			background-color: lime;
+		}
+	}
+
+	&__time {
+		font-size: 5rem;
+		color: $stopwatch-color;
+	}
+
+	&__last-time {
+		font-size: 1.8rem;
+		visibility: hidden;
+
+		&--visible {
+			visibility: visible;
+		}
+	}
+
+	&__btn-box {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: $gap-1;
+	}
+
+	&__btn {
+		padding: 1rem 3rem;
+		border: 1px solid $stopwatch-color;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $stopwatch-color;
+		}
+	}
+
+	&__btn-archive {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+	}
+
+	&__archive {
+		display: none;
+
+		&--visible {
+			display: block;
+		}
+	}
+
+	&__archive-item {
+		width: 350px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__archive-item-text {
+		color: gray;
+	}
+
+	&__archive-item-time {
+		font-weight: bold;
+	}
+}
+
+.modal-stopwatch-help {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: $gap-3;
+	&__title {
+		font-size: 4rem;
+	}
+
+	&__btn {
+		background-color: $stopwatch-color;
+	}
+
+	&__icon {
+		color: $stopwatch-color;
+	}
+}

@@ -1,0 +1,106 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Navigation Mini
+// ===========================================================================
+
+.nav-mini {
+	grid-column: 1/2;
+	grid-row: 1/-1;
+	background-color: $color-900;
+	border-radius: $border-radius;
+	transition: transform 0.3s;
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-2;
+		padding: $gap-2 0;
+		border-bottom: 1px solid $color-border;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+
+	&__btn-box {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-1;
+	}
+
+	&__btn {
+		padding: $gap-2;
+
+		&--active {
+			background-color: rgba(255, 255, 255, 0.1);
+
+			i,
+			span {
+				color: $color-500;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__scroll-box {
+		// border: 1px solid red;
+		overflow-y: scroll;
+		height: 560px;
+		padding-right: $gap-2;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $color-900;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $color-600;
+			border-radius: $border-radius;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: $color-800;
+		}
+	}
+
+	&__projects-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-1;
+	}
+
+	&--hidden {
+		transform: translateX(calc(-150%));
+	}
+}
+
+@media (min-width: 576px) {
+	// .nav-mini {}
+}
+
+@media (min-width: 768px) {
+	// .nav-mini {}
+}
+
+@media (min-width: 992px) {
+	// .nav-mini {}
+}
+
+@media (min-width: 1200px) {
+	// .nav-mini {}
+}
+
+@media (min-width: 1400px) {
+	// .nav-mini {}
+}

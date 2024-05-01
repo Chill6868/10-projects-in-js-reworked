@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// About Project
+// ===========================================================================
+
+.about-project {
+	// border: 1px solid red;
+	// margin: 15em 0;
+	// height: 100vh;
+	// ================
+	// Remove that, just for overview
+	// ================
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.text-box {
+		display: flex;
+		flex-direction: column;
+		gap: $gap-2;
+
+		i {
+			color: $color-500;
+		}
+	}
+
+	&__ul {
+		line-height: 1.5em;
+	}
+
+	&__ul-in-ul {
+		margin-left: $gap-5;
+	}
+}
+
+@media (min-width: 576px) {
+	// .about-project {}
+}
+
+@media (min-width: 768px) {
+	// .about-project {}
+}
+
+@media (min-width: 992px) {
+	// .about-project {}
+}
+
+@media (min-width: 1200px) {
+	// .about-project {}
+}
+
+@media (min-width: 1400px) {
+	// .about-project {}
+}

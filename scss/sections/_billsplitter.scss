@@ -1,0 +1,81 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// BillSplitter
+// ===========================================================================
+
+.billsplitter {
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		border: 1px solid $color-border;
+		width: 33%;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	&__header {
+		padding: $gap-3 $gap-5;
+		background-color: $color-500;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__main-box {
+		padding: $gap-3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	&__output-text {
+		white-space: balance;
+		text-align: center;
+
+		// &--hide-animation {
+		// animation: fadeOut 0.3s forwards, removeMarginTop 0.3s forwards;
+
+		// @keyframes removeMarginTop {
+		// 	from {
+		// 		margin-top: 3rem;
+		// 	}
+
+		// 	to {
+		// 		margin-top: 0;
+		// 	}
+		// }
+		// }
+
+		// &--visible {
+		// animation: fadeIn 0.3s forwards, addMarginTop 0.3s forwards;
+
+		// @keyframes addMarginTop {
+		// 	to {
+		// 		margin-top: 3rem;
+		// 	}
+		// }
+		// }
+	}
+
+	&__output-result {
+		font-weight: bold;
+		color: $color-500;
+	}
+}

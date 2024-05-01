@@ -1,0 +1,54 @@
+// ===========================================================================
+// Tailwind Color Palette (https://uicolors.app/create)
+// ===========================================================================
+
+$color-100: #dbedfe;
+$color-200: #bfe0fe;
+$color-300: #93cdfd;
+$color-400: #5fb1fb;
+$color-500: #4093f7;
+$color-600: #4f4f4f;
+$color-700: #454545;
+$color-800: #181818;
+$color-900: #121212;
+
+$color-text: #fff;
+$color-background: #141414;
+$color-border: rgb(78, 78, 78);
+
+// ===========================================================================
+// Gaps
+// ===========================================================================
+
+$gap-1: 1rem;
+$gap-2: 2rem;
+$gap-3: 3rem;
+$gap-4: 4rem;
+$gap-5: 5rem;
+
+// ===========================================================================
+// Custom Variables
+// ===========================================================================
+
+$border-radius: 6px;
+$hover-brightness: 0.7;
+
+// ===========================================================================
+// Buttons Variables
+// ===========================================================================
+
+$btn-padding: 2rem 4rem;
+$btn-default-color: $color-500;
+$btn-gradient-color: linear-gradient(45deg, $color-900, $color-500);
+$btn-border-width: 2px;
+$btn-border-radius: $border-radius;
+$btn-transition-time: 0.6s;
+$btn-hover-brightness: $hover-brightness;
+
+// ===========================================================================
+// Gradients
+// ===========================================================================
+
+$gradient-300: linear-gradient(to right, $color-300 0%, $color-100 100%);
+$gradient-600: linear-gradient(to right, $color-600 0%, $color-300 100%);
+$gradient-900: linear-gradient(to right, $color-900 0%, $color-600 100%);
