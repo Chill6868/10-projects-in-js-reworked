@@ -72,9 +72,10 @@
 
 	&__scroll-box {
 		// border: 1px solid red;
+		width: calc(100% + 10px);
 		overflow-y: scroll;
 		height: 400px;
-		padding-right: $gap-2;
+		padding-right: 10px;
 
 		&::-webkit-scrollbar {
 			width: 10px;
@@ -85,12 +86,12 @@
 		}
 
 		&::-webkit-scrollbar-thumb {
-			background: $color-600;
+			background: $color-border;
 			border-radius: $border-radius;
 		}
 
 		&::-webkit-scrollbar-thumb:hover {
-			background: $color-800;
+			background: gray;
 		}
 	}
 
