@@ -1,0 +1,70 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Exchange Rate App
+// ===========================================================================
+
+.exchange {
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		// width: 50%;
+		padding: $gap-3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-3;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+	}
+
+	&__text-box {
+		text-align: center;
+	}
+
+	&__input-box {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-flow: column;
+		column-gap: $gap-3;
+		row-gap: $gap-1;
+	}
+
+	&__input {
+		padding: $gap-1;
+		background-color: transparent;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		outline: none;
+	}
+
+	&__select {
+		option {
+			background-color: $color-900;
+		}
+	}
+
+	&__btn-swap-rate {
+		grid-column: 2/3;
+		grid-row: 1/3;
+
+		.btn__border {
+			&::before {
+				background: $color-border;
+			}
+		}
+	}
+}

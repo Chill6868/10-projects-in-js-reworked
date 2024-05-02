@@ -353,9 +353,45 @@ const myNotes = `
 </section>
 `;
 
-const wallet = ``;
+const exchangeRateApp = `
+<section class="exchange">
+<div class="wrapper">
+	<div class="exchange__container">
+		<div class="exchange__box">
+			<div class="exchange__text-box">
+				<h2 class="exchange__title">Exchange Rate App</h2>
+				<p class="exchange__subtitle">Sprawdź aktualne kursy walut!</p>
+			</div>
+			<div class="exchange__input-box">
+				<input class="exchange__input input-1" min="1" type="number" value="1">
+				<select class="exchange__input exchange__select" id="currency-1">
+					<option value="PLN">PLN</option>
+					<option value="USD">USD</option>
+					<option value="GBP">GBP</option>
+					<option value="EUR">EUR</option>
+					<option value="CHF">CHF</option>
+				</select>
+				<button class="btn exchange__btn-swap-rate">
+					<div class="btn__border"></div>
+					<div class="btn__text"><i class="ti ti-refresh"></i></div>
+				</button>
+				<input class="exchange__input input-2" min="1" type="number" disabled>
+				<select class="exchange__input exchange__select" id="currency-2">
+					<option value="PLN">PLN</option>
+					<option value="USD" selected>USD</option>
+					<option value="GBP">GBP</option>
+					<option value="EUR">EUR</option>
+					<option value="CHF">CHF</option>
+				</select>
+			</div>
+			<p class="exchange__rate-text">1 EUR = 4.3599 PLN</p>
+		</div>
+	</div>
+</div>
+</section>
+`;
 
-const exchangeRateApp = ``;
+const wallet = ``;
 
 const countdown = ``;
 
@@ -462,9 +498,11 @@ btnNavMini[6].addEventListener("click", (e) => {
 
 btnNavNormal[7].addEventListener("click", (e) => {
 	pushProject(exchangeRateApp);
+	handleExchangeRateApp();
 });
 btnNavMini[7].addEventListener("click", (e) => {
 	pushProject(exchangeRateApp);
+	handleExchangeRateApp();
 });
 
 // Wallet
