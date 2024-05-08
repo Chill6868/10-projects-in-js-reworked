@@ -233,7 +233,135 @@
                 </div>
             </div>
 
+            <div class="modal__box modal-add-transaction">
+                <h3 class="modal-add-transaction__title">Dodaj transakcję</h3>
+                <div class="input__container">
+                    <div class="input__box">
+                        <input type="text" id="transaction-name">
+                        <label for="transaction-name">Nazwa transakcji:</label>
+                        <p class="input__req"><span class="input__req-icon"><i
+                                    class="ti ti-exclamation-circle"></i></span> Wpisz nazwę transakcji.</p>
+                    </div>
+                    <div class="input__box">
+                        <input type="number" id="transaction-value">
+                        <label for="transaction-value">Kwota transakcji:</label>
+                        <p class="input__req"><span class="input__req-icon"><i
+                                    class="ti ti-exclamation-circle"></i></span> Wpisz kwotę transakcji.</p>
+                    </div>
+                    <div class="input__box">
+                        <select id="transaction-category">
+                            <option value="none" selected disabled>Wybierz kategorię</option>
+                            <option value="income">Przychód</option>
+                            <option value="groceries">Zakupy</option>
+                            <option value="cinema">Kino</option>
+                            <option value="food">Jedzenie</option>
+                        </select>
+                        <p class="input__req"><span class="input__req-icon"><i
+                                    class="ti ti-exclamation-circle"></i></span> Wybierz kategorię transakcji.</p>
+                    </div>
+                </div>
+                <div class="modal-add-transaction__btn-box">
+                    <button class="btn modal-add-transaction__btn btn-save-transaction">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-device-floppy"></i> Zapisz</div>
+                    </button>
+                    <button class="btn modal__btn-close modal-add-transaction__btn btn-save-transaction-cancel">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-square-x"></i> Anuluj</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal__box modal-timer-settings">
+                <h3 class="modal-timer-settings__title">Ustawienia</h3>
+                <div class="input__container">
+                    <div class="input__box">
+                        <input type="text" id="event-name">
+                        <label for="event-name">Nazwa wydarzenia:</label>
+                    </div>
+
+                    <div class="modal-timer-settings__date-input-container">
+                        <div class="input__box">
+                            <input type="number" min="1" max="31" id="timer-day">
+                            <label for="timer-day">Dzień:</label>
+                        </div>
+                        <div class="input__box">
+                            <input type="number" min="1" max="12" id="timer-month">
+                            <label for="timer-month">Miesiąc:</label>
+                        </div>
+                        <div class="input__box">
+                            <input type="number" id="timer-year">
+                            <label for="timer-year">Rok:</label>
+                        </div>
+                    </div>
+
+                    <div class="input__box">
+                        <input type="text" id="img-link">
+                        <label for="img-link">Link do obrazka:</label>
+                    </div>
+                </div>
+                <div class="modal-timer-settings__btn-box">
+                    <button class="btn modal-timer-settings__btn btn-save-settings">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-device-floppy"></i> Zapisz</div>
+                    </button>
+                    <button class="btn modal__btn-close modal-timer-settings__btn btn-save-settings-cancel">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-square-x"></i> Anuluj</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal__box modal-edit-task">
+                <h3 class="modal-edit-task__title">Edytuj treść zadania</h3>
+                <div class="input__box">
+                    <input type="text" id="todo-task-edit" maxlength="30">
+                    <label for="todo-task-edit">Wpisz treść zadania:</label>
+                </div>
+
+                <div class="modal-edit-task__btn-box">
+                    <button class="btn modal-edit-task__btn btn-save-edit-task">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-device-floppy"></i> Zapisz</div>
+                    </button>
+                    <button class="btn modal__btn-close modal-edit-task__btn btn-save-edit-task-cancel">
+                        <div class="btn__border"></div>
+                        <div class="btn__text"><i class="ti ti-square-x"></i> Anuluj</div>
+                    </button>
+                </div>
+            </div>
+
             <div class="main__section-container">
+                <section class="about-project">
+                    <div class="wrapper">
+                        <div class="about-project__container">
+                            <div class="text-box">
+                                <h2 class="text__xl"><i class="ti ti-info-circle"></i> O Projekcie</h2>
+                                <h4 class="text__md">Kilka informacji:</h4>
+                                <ul class="about-project__ul">
+                                    <li>Strona nie jest responsywna, ponieważ używanie jej na telefonach mija się z
+                                        celem.
+                                    </li>
+                                    <li>Wszystkie projekty pochodzą z kursu <a
+                                            href="https://www.udemy.com/course/10-projektow-w-czystym-javascript-cz-1/"
+                                            target="_blank" class="a a__custom-1">10 projektów w czystym
+                                            JavaScript</a>
+                                        autorstwa <a href="https://www.youtube.com/@Majek_03" target="_blank"
+                                            class="a a__custom-1">Majka</a>.</li>
+                                    <li>Projekt powstał z myślą o:
+                                        <ul class="about-project__ul-in-ul">
+                                            <li>Utrwaleniu wiedzy o JS po ukończeniu kursu,</li>
+                                            <li>Próbie napisania Single Web Application bez żadnego frameworka
+                                                (inner.HTML,
+                                                oczywiście 4fun).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

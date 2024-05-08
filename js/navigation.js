@@ -108,7 +108,6 @@ const aboutProject = `
 				<li>Projekt powstał z myślą o:
 					<ul class="about-project__ul-in-ul">
 						<li>Utrwaleniu wiedzy o JS po ukończeniu kursu,</li>
-						<li>Próbie napisania kodu tych projektów w jak najlepszy sposób,</li>
 						<li>Próbie napisania Single Web Application bez żadnego frameworka (inner.HTML,
 							oczywiście 4fun).
 						</li>
@@ -391,11 +390,115 @@ const exchangeRateApp = `
 </section>
 `;
 
-const wallet = ``;
+const wallet = `
+<section class="wallet">
+<div class="wrapper">
+	<div class="wallet__container">
+		<div class="wallet__title-box">
+			<h2 class="wallet__title"><i class="ti ti-wallet"></i> Wallet</h2>
+			<p class="wallet__subtitle">Twój osobisty menedżer finansów.</p>
+		</div>
+		<div class="wallet__main-box">
+			<p class="wallet__text">LISTA TRANSAKCJI</p>
+			<div class="wallet__income-box wallet__box">
+				<h3 class="wallet__box-title">Przychód:</h3>
+			</div>
+			<div class="wallet__spend-box wallet__box">
+				<h3 class="wallet__box-title">Wydatki:</h3>
+			</div>
+			<div class="wallet__available-funds-box wallet__box">
+				<h3 class="wallet__box-title">Dostępne środki:</h3>
+				<p class="wallet__available-funds"><span
+						class="wallet__available-funds-value">0</span>zł</p>
+				<div class="wallet__available-funds-btn-box">
+					<button class="btn wallet__available-funds-btn btn-add-transaction">
+						<div class="btn__border"></div>
+						<span class="btn__text"><i class="ti ti-plus"></i> Dodaj transakcję</span>
+					</button>
+					<button class="btn wallet__available-funds-btn btn-delete-all">
+						<div class="btn__border"></div>
+						<span class="btn__text"><i class="ti ti-trash"></i> Usuń wszystko</span>
+					</button>
+				</div>
+				<h3 class="wallet__box-title">Wybierz motyw:</h3>
+				<div class="wallet__theme-box">
+					<button class="btn wallet__theme-btn theme-light"></button>
+					<button class="btn wallet__theme-btn theme-dark"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+`;
 
-const countdown = ``;
+const timer = `
+<section class="timer">
+<div class="wrapper">
+	<div class="timer__container">
+		<div class="timer__box">
+			<div class="timer__header">
+				<button class="btn timer__settings-btn">
+					<div class="btn__border"></div>
+					<span class="btn__text"><i class="ti ti-settings"></i></span>
+				</button>
+			</div>
+			<div class="timer__main-box">
+				<p class="timer__title"><span class="timer__event-name">nowy rok</span> za:</p>
+				<div class="timer__time-container">
+					<div class="timer__time-box">
+						<span class="timer__time-box-number timer__days">0</span>
+						<span class="timer__time-box-description">Dni</span>
+					</div>
+					<div class="timer__time-box">
+						<span class="timer__time-box-number timer__hours">0</span>
+						<span class="timer__time-box-description">Godzin</span>
+					</div>
+					<div class="timer__time-box">
+						<span class="timer__time-box-number timer__minutes">0</span>
+						<span class="timer__time-box-description">Minut</span>
+					</div>
+					<div class="timer__time-box">
+						<span class="timer__time-box-number timer__seconds">0</span>
+						<span class="timer__time-box-description">Sekund</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+`;
 
-const toDoList = ``;
+const toDoList = `
+	<section class="todo">
+        <div class="wrapper">
+            <div class="todo__container">
+                <div class="todo__box">
+                    <div class="todo__header">
+                        <h2 class="todo__title">ToDo List</h2>
+                        <div class="todo__add-task-box">
+                            <div class="input__box">
+                                <input type="text" id="todo-task" maxlength="30">
+                                <label for="todo-task">Wpisz treść zadania:</label>
+                            </div>
+                            <button class="btn todo__btn-add-task">
+                                <div class="btn__border"></div>
+                                <span class="btn__text"><i class="ti ti-plus"></i> Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="todo__main-box">
+                        <h3 class="todo__subtitle">Lista zadań:</h3>
+                        <p class="todo__no-tasks-text todo__no-tasks-text--visible">Brak zadań na liście.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="todo__notification-container"></div>
+`;
 
 // =============
 // Listeners
@@ -423,9 +526,11 @@ btnNavMini.forEach((btn) => {
 
 btnNavNormal[0].addEventListener("click", (e) => {
 	pushProject(aboutProject);
+	handleButtonClickAnimation();
 });
 btnNavMini[0].addEventListener("click", (e) => {
 	pushProject(aboutProject);
+	handleButtonClickAnimation();
 });
 
 // Drink Search
@@ -433,10 +538,12 @@ btnNavMini[0].addEventListener("click", (e) => {
 btnNavNormal[1].addEventListener("click", (e) => {
 	pushProject(drinkSearch);
 	handleDrinkSearch();
+	handleButtonClickAnimation();
 });
 btnNavMini[1].addEventListener("click", (e) => {
 	pushProject(drinkSearch);
 	handleDrinkSearch();
+	handleButtonClickAnimation();
 });
 
 // Billsplitter
@@ -444,10 +551,12 @@ btnNavMini[1].addEventListener("click", (e) => {
 btnNavNormal[2].addEventListener("click", (e) => {
 	pushProject(billSplitter);
 	handleBillSplitter();
+	handleButtonClickAnimation();
 });
 btnNavMini[2].addEventListener("click", (e) => {
 	pushProject(billSplitter);
 	handleBillSplitter();
+	handleButtonClickAnimation();
 });
 
 // Form Validation
@@ -455,10 +564,12 @@ btnNavMini[2].addEventListener("click", (e) => {
 btnNavNormal[3].addEventListener("click", (e) => {
 	pushProject(formValidation);
 	handleFormValidation();
+	handleButtonClickAnimation();
 });
 btnNavMini[3].addEventListener("click", (e) => {
 	pushProject(formValidation);
 	handleFormValidation();
+	handleButtonClickAnimation();
 });
 
 // Magic 8Ball
@@ -466,10 +577,12 @@ btnNavMini[3].addEventListener("click", (e) => {
 btnNavNormal[4].addEventListener("click", (e) => {
 	pushProject(magic8Ball);
 	handleMagic8Ball();
+	handleButtonClickAnimation();
 });
 btnNavMini[4].addEventListener("click", (e) => {
 	pushProject(magic8Ball);
 	handleMagic8Ball();
+	handleButtonClickAnimation();
 });
 
 // Stopwatch
@@ -477,10 +590,12 @@ btnNavMini[4].addEventListener("click", (e) => {
 btnNavNormal[5].addEventListener("click", (e) => {
 	pushProject(stopwatch);
 	handleStopwatch();
+	handleButtonClickAnimation();
 });
 btnNavMini[5].addEventListener("click", (e) => {
 	pushProject(stopwatch);
 	handleStopwatch();
+	handleButtonClickAnimation();
 });
 
 // MyNotes
@@ -488,10 +603,12 @@ btnNavMini[5].addEventListener("click", (e) => {
 btnNavNormal[6].addEventListener("click", (e) => {
 	pushProject(myNotes);
 	handleMyNotes();
+	handleButtonClickAnimation();
 });
 btnNavMini[6].addEventListener("click", (e) => {
 	pushProject(myNotes);
 	handleMyNotes();
+	handleButtonClickAnimation();
 });
 
 // Exchange Rate App
@@ -499,35 +616,53 @@ btnNavMini[6].addEventListener("click", (e) => {
 btnNavNormal[7].addEventListener("click", (e) => {
 	pushProject(exchangeRateApp);
 	handleExchangeRateApp();
+	handleButtonClickAnimation();
 });
 btnNavMini[7].addEventListener("click", (e) => {
 	pushProject(exchangeRateApp);
 	handleExchangeRateApp();
+	handleButtonClickAnimation();
 });
 
 // Wallet
 
 btnNavNormal[8].addEventListener("click", (e) => {
 	pushProject(wallet);
+	handleWallet();
+	handleButtonClickAnimation();
 });
 btnNavMini[8].addEventListener("click", (e) => {
 	pushProject(wallet);
+	handleWallet();
+	handleButtonClickAnimation();
 });
 
 // Timer
 
 btnNavNormal[9].addEventListener("click", (e) => {
-	pushProject(countdown);
+	pushProject(timer);
+	handleTimer();
+	handleButtonClickAnimation();
 });
 btnNavMini[9].addEventListener("click", (e) => {
-	pushProject(countdown);
+	pushProject(timer);
+	handleTimer();
+	handleButtonClickAnimation();
 });
 
 // ToDo List
 
 btnNavNormal[10].addEventListener("click", (e) => {
 	pushProject(toDoList);
+	handleToDoList();
+	handleButtonClickAnimation();
 });
 btnNavMini[10].addEventListener("click", (e) => {
 	pushProject(toDoList);
+	handleToDoList();
+	handleButtonClickAnimation();
+});
+
+window.addEventListener("load", function () {
+	handleButtonClickAnimation();
 });

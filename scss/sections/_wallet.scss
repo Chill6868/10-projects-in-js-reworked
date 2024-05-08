@@ -1,0 +1,197 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Wallet
+// ===========================================================================
+:root {
+	--color-bg: #121212;
+	--color-text: #ffffff;
+}
+
+.wallet {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		// border: 1px solid red;
+		height: 100%;
+		padding: $gap-3;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	&__title-box {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-1;
+	}
+
+	&__title {
+		font-size: 5rem;
+		font-weight: normal;
+	}
+
+	&__main-box {
+		// border: 1px solid green;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		gap: $gap-3;
+		// position: relative;
+		// width: 50%;
+		// padding: $gap-3;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		// flex-direction: column;
+		// gap: $gap-3;
+		// border: 1px solid $color-border;
+		// border-radius: $border-radius;
+		// text-align: center;
+		// overflow: hidden;
+	}
+
+	&__text {
+		grid-column: 1/3;
+		grid-row: 1/2;
+		padding: $gap-3;
+		text-align: center;
+	}
+
+	&__box {
+		padding: $gap-3;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	&__box-title {
+		text-align: center;
+	}
+
+	&__income-box {
+		grid-column: 1/2;
+		grid-row: 2/-1;
+
+		.wallet__box-title {
+			color: rgb(10, 170, 10);
+		}
+	}
+
+	&__spend-box {
+		grid-column: 2/3;
+		grid-row: 2/-1;
+
+		.wallet__box-title {
+			color: rgb(182, 43, 43);
+		}
+	}
+
+	&__available-funds-box {
+		grid-column: 3/4;
+		grid-row: 1/-1;
+	}
+
+	&__available-funds {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	&__available-funds-btn-box {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $gap-2;
+	}
+
+	&__available-funds-btn {
+		padding: $gap-1;
+
+		.btn__border {
+			&::before {
+				background: $color-border;
+			}
+		}
+	}
+
+	&__theme-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: $gap-2;
+	}
+
+	&__theme-btn {
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		background-color: red;
+		border: 1px solid $color-border;
+		border-radius: 50%;
+
+		&:nth-of-type(1) {
+			background-color: #fff;
+		}
+
+		&:nth-of-type(2) {
+			background-color: #000;
+		}
+	}
+
+	&__item {
+		border: 1px solid $color-border;
+		padding: $gap-1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: $border-radius;
+	}
+
+	&__item-value {
+		&--income {
+			color: rgb(10, 170, 10);
+		}
+
+		&--spend {
+			color: rgb(182, 43, 43);
+		}
+	}
+
+	&__item-close-btn {
+		padding: 0.5rem;
+	}
+}
+
+.modal-add-transaction {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-3;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__btn-box {
+		display: flex;
+		gap: $gap-1;
+	}
+
+	&__btn {
+		.btn__border {
+			&::before {
+				background: $color-800 border-box;
+			}
+		}
+	}
+}

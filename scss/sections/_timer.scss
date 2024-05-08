@@ -1,0 +1,132 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Timer
+// ===========================================================================
+
+.timer {
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		// position: relative;
+		// width: 50%;
+		// justify-content: center;
+		// align-items: center;
+		// flex-direction: column;
+		// gap: $gap-3;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		// text-align: center;
+		// overflow: hidden;
+	}
+
+	&__header {
+		position: relative;
+		// width: 500px;
+		height: 300px;
+		background-image: url("https://cdn.pixabay.com/photo/2019/06/06/22/50/sea-4257204_1280.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__settings-btn {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		padding: $gap-1;
+		background-color: $color-900;
+		font-size: 2.5rem;
+
+		.btn__border {
+			&::before {
+				background: $color-border;
+			}
+		}
+	}
+
+	&__main-box {
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-3;
+		padding: $gap-3;
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: bold;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	&__time-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: $gap-3;
+	}
+
+	&__time-box {
+		padding: $gap-3;
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: $gap-2;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+	}
+
+	&__time-box-number {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+}
+
+.modal-timer-settings {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-3;
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	&__date-input-container {
+		display: flex;
+		gap: $gap-2;
+	}
+
+	&__btn-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: $gap-2;
+	}
+
+	&__btn {
+		.btn__border {
+			&::before {
+				background: $color-border;
+			}
+		}
+	}
+}

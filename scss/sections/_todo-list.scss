@@ -1,0 +1,203 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// ToDo List
+// ===========================================================================
+
+.todo {
+	// border: 1px solid green;
+	height: 100%;
+
+	.wrapper {
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box {
+		// position: relative;
+		// width: 50%;
+		// justify-content: center;
+		// align-items: center;
+		// flex-direction: column;
+		// gap: $gap-3;
+		width: 50%;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		// text-align: center;
+		// overflow: hidden;
+	}
+
+	&__header {
+		padding: $gap-3;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: $gap-3;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 3.5rem;
+	}
+
+	&__add-task-box {
+		display: flex;
+		// justify-content: center;
+		// align-items: center;
+		gap: $gap-3;
+	}
+
+	&__btn-add-task {
+		// padding: 0;
+		flex: 0 0 auto;
+	}
+
+	&__notification-container {
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+		// height: 250px;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-3;
+		// border: 1px solid blue;
+		transition: transform 0.3s;
+		// transform: translateY(-100%);
+	}
+
+	&__error-notification {
+		z-index: 100000;
+		padding: $gap-2;
+		width: 250px;
+		background-color: $color-800;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+		animation: show 0.6s;
+
+		i {
+			color: red;
+		}
+
+		@keyframes show {
+			from {
+				transform: translateX(150%);
+			}
+
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		&--hide {
+			animation: hide 0.6s;
+
+			@keyframes hide {
+				from {
+					transform: translateX(0);
+				}
+
+				to {
+					transform: translateX(150%);
+				}
+			}
+		}
+	}
+
+	&__main-box {
+		padding: $gap-3;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-2;
+		background-color: $color-800;
+		border-top: 1px solid $color-border;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	&__task-box {
+		padding: $gap-1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+	}
+
+	&__task-name {
+		&--completed {
+			color: gray;
+		}
+	}
+
+	&__task-btn-box {
+		display: flex;
+		gap: $gap-1;
+	}
+
+	&__task-btn {
+		padding: 1rem;
+	}
+
+	&__task-complete {
+		color: royalblue;
+
+		&--completed {
+			color: gray;
+		}
+	}
+
+	&__task-edit {
+		color: limegreen;
+	}
+
+	&__task-delete {
+		color: red;
+	}
+
+	&__no-tasks-text {
+		display: none;
+		text-align: center;
+		font-size: 1.6rem;
+
+		&--visible {
+			display: block;
+		}
+	}
+}
+
+.modal-edit-task {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-3;
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	&__btn-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: $gap-2;
+	}
+
+	&__btn {
+		.btn__border {
+			&::before {
+				background: $color-border;
+			}
+		}
+	}
+}
