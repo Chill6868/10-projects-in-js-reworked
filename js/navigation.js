@@ -170,14 +170,14 @@ const billSplitter = `
 			<div class="billsplitter__main-box">
 				<div class="input__container">
 					<div class="input__box">
-						<input type="number" min="1" id="amount-to-pay">
+						<input class="input-billsplitter" type="number" min="1" id="amount-to-pay">
 						<label for="amount-to-pay">Kwota do zapłaty:</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Podaj kwotę do zapłaty.
 						</p>
 					</div>
 					<div class="input__box">
-						<input type="number" min="1" id="number-of-people">
+						<input class="input-billsplitter" type="number" min="1" id="number-of-people">
 						<label for="number-of-people">Ilość osób:</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Podaj ilość osób.</p>
@@ -218,14 +218,14 @@ const formValidation = `
 			<div class="form-validation__main-box">
 				<div class="input__container">
 					<div class="input__box">
-						<input type="text" id="username">
+						<input class="input-form-validation" type="text" id="username">
 						<label for="username">Nazwa użytkownika:</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Nazwa użytkownika musi
 							składać się z min. 3 znaków.</p>
 					</div>
 					<div class="input__box">
-						<input type="text" id="password">
+						<input class="input-form-validation" type="text" id="password">
 						<label for="password">Hasło</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Hasło musi składać się
@@ -233,14 +233,14 @@ const formValidation = `
 							min. 6 znaków.</p>
 					</div>
 					<div class="input__box">
-						<input type="text" id="password-repeat">
+						<input class="input-form-validation" type="text" id="password-repeat">
 						<label for="password-repeat">Powtórz hasło:</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Hasła nie pasują do
 							siebie.</p>
 					</div>
 					<div class="input__box">
-						<input type="text" id="mail">
+						<input class="input-form-validation" type="text" id="mail">
 						<label for="mail">E-Mail:</label>
 						<p class="input__req"><span class="input__req-icon"><i
 									class="ti ti-exclamation-circle"></i></span> Podaj poprawny adres

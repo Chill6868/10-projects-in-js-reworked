@@ -1,5 +1,6 @@
 const handleFormValidation = () => {
-	const inputAll = document.querySelectorAll("input");
+	const inputAll = document.querySelectorAll(".input-form-validation");
+	console.log(inputAll);
 	const inputUsername = document.querySelector("input#username");
 	const inputPassword = document.querySelector("input#password");
 	const inputPasswordRepeat = document.querySelector("input#password-repeat");

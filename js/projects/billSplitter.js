@@ -1,5 +1,5 @@
 const handleBillSplitter = () => {
-	const inputAll = document.querySelectorAll("input");
+	const inputAll = document.querySelectorAll(".input-billsplitter");
 	const inputAmount = document.querySelector("#amount-to-pay");
 	const inputPeople = document.querySelector("#number-of-people");
 	const inputTip = document.querySelector("#tip");
