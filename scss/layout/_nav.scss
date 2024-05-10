@@ -75,6 +75,7 @@
 		width: calc(100% + 10px);
 		overflow-y: scroll;
 		height: 400px;
+		// flex-grow: 1;
 		padding-right: 10px;
 
 		&::-webkit-scrollbar {
